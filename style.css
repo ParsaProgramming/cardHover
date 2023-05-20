@@ -1,8 +1,153 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+:root {
+    --background_color: #22252a;
+    --lighter_black: #2f3640;
+    --theme_color:#fa8231;
+
+}
+
+body {
     font-family: Poppins;
+    background: var(--background_color);
+    color: white;
+}
+
+.container {
+    text-align: center;
+    width: 1000px;
+    height: 700px;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.container .cards__firstrow,
+.container .cards__secondrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.container .cards__firstrow .card,
+.container .cards__secondrow .card {
+    background-color: var(--lighter_black);
+    margin-right: 20px;
+    padding: 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.container .cards__firstrow .card::before,
+.container .cards__secondrow .card::before{
+    content: '';
+    width: 70px;
+    height: 70px;
+    background: var(--theme_color);
+    position: absolute;
+    top:0;
+    right:0;
+    border-bottom-left-radius: 100px;
+    transition: all 0.5s ease;
+    z-index: -1;
+
+}
+
+.container .cards__firstrow .card:hover::before,
+.container .cards__secondrow .card:hover::before {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+}
+
+.container .cards__firstrow .card:hover .icon-place,
+.container .cards__secondrow .card:hover .icon-place {
+    background: white;
+    color: var(--theme_color);
+}
+
+.container .cards__firstrow .card:hover .card-text p,
+.container .cards__secondrow .card:hover .card-text p {
+    color: white;
+}
+
+.container .cards__firstrow .card:hover a,
+.container .cards__secondrow .card:hover a {
+    border-bottom-color: white;
+}
+
+
+
+
+.container .cards__firstrow .card .card-text,
+.container .cards__secondrow .card .card-text {
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid var(--theme_color);
+    transition: all 0.5s ease;
+}
+
+.container .special_item {
+    width: 80px;
+    height: 80px;
+    background: var(--theme_color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 100px;
+    transition: all 0.5s ease;
+    z-index: 500;
+}
+
+
+
+.container .cards__firstrow .card .card-text p,
+.container .cards__secondrow .card .card-text p {
+    color: rgb(177, 177, 177);
+    margin-bottom: 20px;
+    transition: all 0.5s ease;
+}
+
+.container .cards__firstrow .card .icon-place,
+.container .cards__secondrow .card .icon-place {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background: var(--theme_color);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.container .cards__firstrow .card .icon-place i,
+.container .cards__secondrow .card .icon-place i {
+    font-size: 30px;
+}
+
+
+.title {
+    margin: auto;
+    width: 1000px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.title p {
+    line-height: 30px;
+}
+
+.title span {
+    color: var(--theme_color);
 }

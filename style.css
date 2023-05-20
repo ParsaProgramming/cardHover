@@ -130,3 +130,32 @@ body {
 .title span {
     color: var(--theme_color);
 }
+
+@media (max-width: 981px) {
+    .container {
+        width: 700px;
+    }
+
+    .container .cards {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .container .cards .card {
+        margin-bottom: 20px;
+    }
+
+    .title {
+        width: 700px;
+    }
+}
+
+@media (max-width: 686px) {
+    .container {
+        width: 500px;
+    }
+
+    .title {
+        width: 500px;
+    }
+}

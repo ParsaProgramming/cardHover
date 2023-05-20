@@ -7,7 +7,7 @@
 :root {
     --background_color: #22252a;
     --lighter_black: #2f3640;
-    --theme_color:#fa8231;
+    --theme_color: #fa8231;
 
 }
 
@@ -25,16 +25,14 @@ body {
     margin-bottom: 60px;
 }
 
-.container .cards__firstrow,
-.container .cards__secondrow {
+.container .cards {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 15px;
 }
 
-.container .cards__firstrow .card,
-.container .cards__secondrow .card {
+.container .card {
     background-color: var(--lighter_black);
     margin-right: 20px;
     padding: 20px;
@@ -43,49 +41,43 @@ body {
     z-index: 1000;
 }
 
-.container .cards__firstrow .card::before,
-.container .cards__secondrow .card::before{
+.container .card::before {
     content: '';
     width: 70px;
     height: 70px;
     background: var(--theme_color);
     position: absolute;
-    top:0;
-    right:0;
+    top: 0;
+    right: 0;
     border-bottom-left-radius: 100px;
     transition: all 0.5s ease;
     z-index: -1;
 
 }
 
-.container .cards__firstrow .card:hover::before,
-.container .cards__secondrow .card:hover::before {
+.container .card:hover::before {
     width: 100%;
     height: 100%;
     border-radius: 0px;
 }
 
-.container .cards__firstrow .card:hover .icon-place,
-.container .cards__secondrow .card:hover .icon-place {
+.container .card:hover .icon-place {
     background: white;
     color: var(--theme_color);
 }
 
-.container .cards__firstrow .card:hover .card-text p,
-.container .cards__secondrow .card:hover .card-text p {
+.container .card:hover .card-text p {
     color: white;
 }
 
-.container .cards__firstrow .card:hover a,
-.container .cards__secondrow .card:hover a {
+.container .card:hover a {
     border-bottom-color: white;
 }
 
 
 
 
-.container .cards__firstrow .card .card-text,
-.container .cards__secondrow .card .card-text {
+.container .card .card-text {
     margin-top: 20px;
     line-height: 30px;
 }
@@ -97,29 +89,17 @@ body {
     transition: all 0.5s ease;
 }
 
-.container .special_item {
-    width: 80px;
-    height: 80px;
-    background: var(--theme_color);
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-bottom-left-radius: 100px;
-    transition: all 0.5s ease;
-    z-index: 500;
+.container .card .icon-place {
+    font-size: 30px;
 }
 
-
-
-.container .cards__firstrow .card .card-text p,
-.container .cards__secondrow .card .card-text p {
+.container .card .card-text p {
     color: rgb(177, 177, 177);
     margin-bottom: 20px;
     transition: all 0.5s ease;
 }
 
-.container .cards__firstrow .card .icon-place,
-.container .cards__secondrow .card .icon-place {
+.container .card .icon-place {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,8 +111,7 @@ body {
     transition: all 0.5s ease;
 }
 
-.container .cards__firstrow .card .icon-place i,
-.container .cards__secondrow .card .icon-place i {
+.containe .card .icon-place {
     font-size: 30px;
 }
 
